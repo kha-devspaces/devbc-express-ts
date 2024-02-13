@@ -1,12 +1,12 @@
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "rootDir": ".",
-    "outDir": "./lib",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "composite": true
-  },
-  "exclude": ["**/*.spec.ts"]
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./lib",
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"composite": true
+	},
+	"exclude": ["**/*.spec.ts"]
 }
