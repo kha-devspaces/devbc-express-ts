@@ -5,6 +5,7 @@ import { createPool } from "mysql2/promise";
 import ServerlessHttp from "serverless-http";
 import errorHandler from "./middlewares/errors";
 import foodRouter from "./routes/foods";
+import productRouter from "./routes/product";
 
 export const app = express();
 
@@ -31,5 +32,6 @@ app.get("/", (req, res) => {
 });
 
 app.use(foodRouter);
+app.use(productRouter);
 app.use(errorHandler);
 // bug!
