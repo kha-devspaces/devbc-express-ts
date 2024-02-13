@@ -5,20 +5,23 @@
   "typings": "lib/app.d.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run ./server.ts",
+    "dev": "bun run ./src/server.ts",
+    "lint": "biome check --apply .",
     "build": "tsc -b tsconfig-onlyts.json"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.5.3",
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/mysql": "^2.15.25",
     "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "mysql": "^2.18.1",
+    "mysql2": "^3.9.1",
     "serverless-http": "^3.2.0"
   }
 }
