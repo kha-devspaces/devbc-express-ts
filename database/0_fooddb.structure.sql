@@ -1,6 +1,3 @@
-CREATE USER 'host'@'%' IDENTIFIED BY 'host';
-GRANT ALL PRIVILEGES ON *.* TO 'host'@'%';
-
 CREATE DATABASE IF NOT EXISTS food_db;
 USE food_db;
 
