@@ -5,8 +5,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "NODE_ENV='development' bun run --watch ./src/server.ts",
-		"test": "TZ='Asia/Bangkok' jest --runInBand --passWithNoTests --logHeapUsage src",
-		"lint": "biome check --apply src"
+		"test": "TZ='Asia/Bangkok' jest --runInBand --passWithNoTests --logHeapUsage test_e2e",
+		"lint": "biome check --apply src test_e2e"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.5.3",

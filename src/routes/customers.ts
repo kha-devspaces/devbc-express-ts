@@ -11,12 +11,13 @@ router.get(
 		const schema = z.object({
 			id: z.coerce.number(),
 		});
-		const { success } = schema.safeParse(req.params);
 
-		if (success) {
+		const result = schema.safeParse(req.params);
+
+		if (result.success) {
 			next();
 		} else {
-			next(badRequest());
+			next(badRequest(result.error.message));
 		}
 	},
 	async (req, res, next) => {
